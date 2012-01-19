@@ -1,0 +1,23 @@
+name: uPluginMgr
+author: Greizgh
+description: Load/Unload a plugin on the fly, through in-game or console command
+main: com.greizgh.uPluginMgr.PluginMgr
+version: 1.0
+commands:
+  uPM:
+    usage: /<command> load|unload|reload <plugin>
+    description: load given plugin
+permissions:
+  uPluginMgr.*:
+    description: manage plugin loading/unloading
+    default: op
+    children:
+      uPluginMgr.load: true
+      uPluginMgr.unload: true
+      uPluginMgr.reload: true
+  uPluginMgr.load:
+    description: allow you to load a plugin
+  uPluginMgr.unload:
+    description: allow you to unload a plugin
+  uPluginMgr.reload:
+    description: allow you to reload a plugin

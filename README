@@ -1,0 +1,20 @@
+Simple bukkit plugin to load and unload plugins on the fly.
+People with uPluginMgr.* permission can load plugins by issuing /uPL load <plugin> in-game.
+Console loading/unloading is also supported.
+
+usage: /uPM load|unload|reload <plugin>
+
+permissions:
+  uPluginMgr.*:
+    description: manage plugin loading/unloading
+    default: op
+    children:
+      uPluginMgr.load: true
+      uPluginMgr.unload: true
+      uPluginMgr.reload: true
+  uPluginMgr.load:
+    description: allow you to load a plugin
+  uPluginMgr.unload:
+    description: allow you to unload a plugin
+  uPluginMgr.reload:
+    description: allow you to reload a plugin
